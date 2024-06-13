@@ -53,6 +53,55 @@ const SobreSections = styled.div`
         background-size: cover;
         background-position: top;
     }
+
+    @media (max-width: 768px){
+        flex-direction: column;
+        height: auto;
+
+        div {
+            width: 100%;
+        }
+
+        .img1 {
+            height: 30vh;
+            margin: 40px 0;
+        }
+        .img2 {
+            height: 30vh;
+            margin: 20px 0;
+        }
+        .img3 {
+            height: 30vh;
+            margin: 40px 0;
+        }
+        .img4 {
+            height: 30vh;
+            margin: 20px 0;
+        }
+
+        &.directionReverseMobile {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            height: 18vh;
+            width: 96%;
+        }
+    }
+
+    @media (min-width: 770px) and (max-width: 1300px){
+      h2 {
+        font-size: 30px;
+      }  
+      p {
+        width: 90%;
+        font-size: 22px;
+        line-height: 34px;
+    }
+    }
 `
 
 export default function Sobre (){
@@ -65,7 +114,7 @@ export default function Sobre (){
                 </div>
                 <div className="img1"></div>
             </SobreSections>
-            <SobreSections>
+            <SobreSections className="directionReverseMobile">
                 <div className="img2"></div>
                 <div><p>A história começa com o nascimento de Harry e a tragédia que se abate sobre sua família. Seus pais são assassinados pelo bruxo das trevas, Lord Voldemort, que tenta matar também o bebê Harry. No entanto, o feitiço de Voldemort se volta contra ele mesmo, deixando Harry com apenas uma cicatriz em forma de raio na testa e o apelido de "O Menino que Sobreviveu".</p></div>
             </SobreSections>
@@ -75,7 +124,7 @@ export default function Sobre (){
                 </div>
                 <div className="img3"></div>
             </SobreSections>
-            <SobreSections>
+            <SobreSections className="directionReverseMobile">
                 <div className="img4"></div>
                 <div><p>Ao longo dos sete livros da série, Harry e seus amigos enfrentam uma série de desafios e perigos, enquanto tentam desvendar os mistérios do passado de Harry e encontrar uma forma de derrotar Voldemort de uma vez por todas. A saga de Harry Potter é uma história de coragem, amizade e amor, que cativou milhões de leitores em todo o mundo e se tornou um fenômeno cultural.</p></div>
             </SobreSections>

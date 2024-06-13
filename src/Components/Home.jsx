@@ -28,6 +28,7 @@ const EnqueteContainer = styled.div`
 
     p {
         font-size: 35px;
+        text-align: center;
     }
 
     @media (max-width: 768px){
@@ -43,8 +44,11 @@ const EnqueteContainer = styled.div`
 
         p {
             font-size: 25px;
-            text-align: center;
         }
+    }
+
+    @media (min-width: 770px) and (max-width: 1300px){
+        width: 41%;
     }
 `
 const BotoesContainer = styled.div`
@@ -84,6 +88,12 @@ const StyledSwiper = styled(Swiper)`
     display: flex;
     align-items: center;
     background-color: #000;
+
+    @media (max-width: 768px){
+        width: 320%;
+        overflow: hidden;
+        height: 40vh;
+    }
 `
 const StyledSwiperSlide = styled(SwiperSlide)`
     height: 45vh;
@@ -92,11 +102,23 @@ const StyledSwiperSlide = styled(SwiperSlide)`
     border: solid;
     margin-top: 30px;
 
-    img{
+    img {
         width: 14.2vw;
         height: 40vh;
         border-radius: 20px;       
-    }  
+    } 
+    
+    @media (max-width: 768px){
+        height: 30vh;
+        width: 0vw;
+        margin-right: 50px;
+
+    img {
+        width: 28vw;
+        height: 20vh;
+        border-radius: 15px;
+    }
+    }
 `
 
 export default function Home () {

@@ -15,13 +15,13 @@ flex-direction: column;
 align-items: center;
 
 @media (max-width: 768px){
-    height: 100vh;
 } 
 `
 
 const InfoPersonagens = styled.section`
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 80%;
 
     div {
@@ -31,11 +31,36 @@ const InfoPersonagens = styled.section`
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        text-align: center;
     }
     img {
         width: 12vw;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.8) 0px 12px 13px, rgba(0, 0, 0, 0.433) 0px -3px 5px;
      }
+
+     @media (max-width: 768px){
+        flex-direction: column;
+
+        div {
+            width: 100%;
+        }
+        
+        img {
+            width: 50vw;
+        }
+    }
+
+    @media (min-width: 770px) and (max-width: 1300px){
+        width: 100%;
+
+        div{
+            width: 30%;
+        }
+
+        img {
+            width: 15vw;
+        }
+    }
 `
 
 export default function Personagens() {
